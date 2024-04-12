@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/add-incident.css">
+    <title>Add New Incident</title>
+</head>
+<body>
+    <form id="incidentForm">
+        <input type="text" id="title" placeholder="Title" required>
+        <textarea id="description" placeholder="Description" required></textarea>
+        <select title="Category" id="category">
+          <option value="Accident">Accident</option>
+          <option value="Fighting">Fighting</option>
+          <option value="Rioting">Rioting</option>
+        </select>
+        
+         <!-- Input for uploading pictures -->
+         <input title="Add Images" type="file" id="pictures" name="pictures" accept="image/*" multiple>
+        <button type="submit" id="submitBtn">Submit</button>
+    </form>
+      
+</body>
+</html>
