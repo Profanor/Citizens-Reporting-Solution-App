@@ -7,19 +7,23 @@
     <title>Add New Incident</title>
 </head>
 <body>
-    <form id="incidentForm">
-        <input type="text" id="title" placeholder="Title" required>
-        <textarea id="description" placeholder="Description" required></textarea>
-        <select title="Category" id="category">
-          <option value="Accident">Accident</option>
-          <option value="Fighting">Fighting</option>
-          <option value="Rioting">Rioting</option>
-        </select>
-        
-         <!-- Input for uploading pictures -->
-         <input title="Add Images" type="file" id="pictures" name="pictures" accept="image/*" multiple>
-        <button type="submit" id="submitBtn">Submit</button>
-    </form>
-      
+    <div class="form-container">
+        <h1>Report an Incident</h1>
+        <form id="incidentForm">
+            <input type="text" id="title" placeholder="Title" required>
+            <textarea id="description" placeholder="Description" required></textarea>
+            <select title="Category" id="category">
+                <option value="Accident">Accident</option>
+                <option value="Fighting">Fighting</option>
+                <option value="Rioting">Rioting</option>
+            </select>
+            <!-- Input for uploading pictures -->
+            <input title="Add Images" type="file" id="pictures" name="pictures" accept="image/*" multiple>
+            <button type="submit" id="submitBtn">Submit</button>
+        </form>
+    </div>
+    <div class="go-back-container">
+        <a href="index.html" class="go-back-button">Go Back</a>
+    </div>
 </body>
 </html>

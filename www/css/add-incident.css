@@ -11,17 +11,38 @@
     background-color: #f5f5f5;
     padding: 20px;
   }
+  h1{
+    text-align: center;
+    font-family: sans-serif;
+  }
   
-  /* Form container styles */
-  #incidentForm {
+  .form-container {
     max-width: 400px;
     margin: 0 auto;
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
+    margin-bottom: 20px; /* Add margin bottom to create space between form and button */
+}
+
+.go-back-container {
+    text-align: center;
+}
+
+.go-back-button {
+    display: inline-block; /* Change display to inline-block */
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px; /* Add padding for better spacing */
+    border-radius: 4px;
+    text-decoration: none; /* Remove default link underline */
+    transition: background-color 0.3s ease;
+}
+
+.go-back-button:hover {
+    background-color: #0056b3;
+}
   /* Form input styles */
   input[type="text"],
   textarea,
