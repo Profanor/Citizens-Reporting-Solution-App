@@ -7,10 +7,54 @@
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
     <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/index.css">
     <title>Citizens Incident Reporting Application</title>
 </head>
 <body>
+    <nav class="navbar-container">
+        <div class="navbar-logo">
+            <a href="/" class="navbar-link">
+                <button type="button" class="logo-btn">Respira</button>
+            </a>
+        </div>
+    
+        <div class="navbar-links">
+            <div class="neomorphic-link">
+                <a href="signup.html" class="navbar-link">
+                    Signup
+                </a>
+            </div>
+            <div class="neomorphic-link">
+                <a href="login.html" class="navbar-link">
+                    Login
+                </a>
+            </div>
+            <div class="neomorphic-link">
+                <a href="logout.html" class="navbar-link">
+                    Logout
+                </a>
+            </div>
+        </div>
+        
+        <div>
+            <a href="#" class="btn2 navbar-link" id="additionalLinksBtn">
+                &#8595
+            </a>
+        </div>
+    </nav>
+    <!-- Rectangular div containing additional links in mobile view -->
+    <div id="additionalLinksContainer" class="additional-links-container">
+        <a href="signup.html" class="navbar-link neomorphic-link">
+            Signup
+        </a>
+        <a href="login.html" class="navbar-link neomorphic-link">
+            Login
+        </a>
+        <a href="logout.html" class="navbar-link neomorphic-link">
+            Logout
+        </a>
+    </div>
     <header>
         <h1>Welcome to the Citizens Incident Reporting Application</h1>
     </header>
@@ -23,9 +67,9 @@
             </a>
         </section>
     </main>
-    <footer>
+    <footer id="links">
         <p>Contact us: support@citizensreporting.com</p>
     </footer>
-    <script src="js/add-incident.js"></script>
+    <script src="js/index.js"></script>
 </body>
 </html>

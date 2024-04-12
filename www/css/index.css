@@ -13,6 +13,7 @@ header {
     color: #fff;
     text-align: center;
     padding: 20px 0;
+    margin-top: 60px;
 }
 
 main {
@@ -45,6 +46,196 @@ button {
 
 button:hover {
     background-color: #0056b3;
+}
+
+
+/* Navbar Styles*/
+.navbar-container {
+    background-color: #d3d2da;
+    position: fixed;
+    top: 0;
+    left: 0; 
+    right: 0; 
+    padding: 1rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-logo-text {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 0.5rem;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 30px;
+    margin-left: auto; 
+}
+
+.navbar-links.responsive {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+  
+.navbar-link {
+    color: black;
+    text-decoration: none;
+}
+
+.btn {
+    background-color: #d3d2da;
+    border-radius: 10px;
+    border: 1px black;
+    padding: 10px 40px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    color: black;
+    cursor: pointer;
+    box-shadow: 4px 4px 8px #9e9ea4, 
+                -4px -4px 8px white;
+    transition: box-shadow 0.3s ease;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #808080;
+}
+
+.btn:hover {
+    box-shadow: 3px 3px 5px #9e9ea4, 
+                -3px -3px 5px white;
+  }
+
+.logo-btn {
+    background-color: #d3d2da;
+    border-radius: 10px;
+    border: 1px black;
+    padding: 10px 40px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    color: black;
+    cursor: pointer;
+    box-shadow: 3px 3px 5px #9e9ea4, 
+                -3px -3px 5px white;
+    transition: box-shadow 0.3s ease;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #808080;
+  }
+  .logo-btn:hover {
+    background-color: #d3d2da;
+  }
+
+.neomorphic-link {
+    display: inline-block;
+    margin-left: auto;
+    border-radius: 3px; 
+    cursor: pointer;
+    padding: 10px; 
+    box-shadow: 4px 4px 8px #9e9ea4, 
+                -4px -4px 8px white;
+    transition: box-shadow 0.3s ease;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #808080;
+}
+  
+.neomorphic-link:hover {
+    box-shadow: 3px 3px 5px #9e9ea4, 
+                -3px -3px 5px white;
+}
+  
+.neomorphic-link.active {
+    box-shadow: 2px 2px 4px #d9d9d9, -2px -2px 4px #ffffff; 
+}
+  
+.material-icons {
+    vertical-align: middle; 
+    margin-right: 5px; 
+}
+
+.btn2 {
+    display: none;
+}
+
+/* Styles for the additional links container */
+.additional-links-container {
+    display: none;
+    border-radius: 3px;
+    position: fixed;
+    top: 80px;
+    right: 0; /* moves the container to the right*/
+    width: 250px;
+    background-color:#d3d2da; 
+    padding: 10px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #808080;
+    text-align: right;
+    z-index: 999;
+}
+
+.additional-links-container.show {
+    display: none;
+}
+
+.fa-circle {
+    color: #df9126;
+}
+
+/* media queries for Navbar */
+@media (max-width: 768px) {
+    .navbar-links {
+        display: none;
+    }
+    .additional-links-container {
+        display: block;
+    }
+    .additional-links-container .navbar-link {
+        display: inline-block;
+        margin-right: 10px;
+    }
+    .btn {
+        display: inline-block;
+        border-radius: 3px;
+        padding: 10px;
+        cursor: pointer;
+        box-shadow: 4px 4px 8px #9e9ea4, 
+                    -4px -4px 8px white;
+        transition: box-shadow 0.3s ease;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #808080;
+        margin-left: 170px;
+    }
+    .btn i {
+        font-size: 20px; /* Set font size of the icon inside the button */
+    }
+    .btn2 {
+        display: inline-block;
+        border-radius: 3px;
+        padding: 10px;
+        cursor: pointer;
+        box-shadow: 4px 4px 8px #9e9ea4, 
+                    -4px -4px 8px white;
+        transition: box-shadow 0.3s ease;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #808080;
+    }
+    .btn2 i {
+        font-size: 20px; 
+    }
+    .btn2:hover {
+        box-shadow: 3px 3px 5px #9e9ea4, 
+                    -3px -3px 5px white;
+      }
 }
 
 footer {
