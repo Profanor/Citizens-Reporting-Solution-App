@@ -44,7 +44,7 @@ document.getElementById('incidentForm').addEventListener('submit', function(even
 });
 
 function sendFormData(formData, submitButton) {
-    fetch('http://localhost:3000/users/incident', {
+    fetch('/users/incident', {
         method: 'POST',
         body: formData
     })
