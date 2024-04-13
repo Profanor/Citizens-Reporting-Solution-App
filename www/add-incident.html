@@ -9,7 +9,7 @@
 <body>
     <div class="form-container">
         <h1>Report an Incident</h1>
-        <form id="incidentForm">
+        <form id="incidentForm" action="/users/incident" method="post">
             <input type="text" id="title" placeholder="Title" required>
             <textarea id="description" placeholder="Description" required></textarea>
             <select title="Category" id="category">
@@ -19,6 +19,7 @@
             </select>
             <!-- Input for uploading pictures -->
             <input title="Add Images" type="file" id="pictures" name="pictures" accept="image/*" multiple>
+            <img id="imagePreview" src="#" alt="Image Preview" style="display: none; width: 100%; height: 200px; margin-bottom: 15px;">
             <button type="submit" id="submitBtn">Submit</button>
         </form>
     </div>

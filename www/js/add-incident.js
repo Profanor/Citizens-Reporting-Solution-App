@@ -44,8 +44,11 @@ document.getElementById('incidentForm').addEventListener('submit', function(even
 });
 
 function sendFormData(formData, submitButton) {
-    fetch('backend-url/incidents', {
+    fetch('http://localhost:3000/users/incident', {
         method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+          },
         body: formData
     })
     .then(response => {
@@ -68,3 +71,24 @@ function sendFormData(formData, submitButton) {
         submitButton.disabled = false;
     });
 }
+
+//javascript to preview the selected image
+document.getElementById('pictures').addEventListener('change', function(event) {
+    const fileInput = event.target;
+    const imagePreview = document.getElementById('imagePreview');
+
+    // Check if any file is selected
+    if (fileInput.files && fileInput.files[0]) {
+        const reader = new FileReader();
+
+        reader.onload = function(e) {
+            imagePreview.src = e.target.result;
+            imagePreview.style.display = 'block'; // Show the image preview
+        };
+
+        reader.readAsDataURL(fileInput.files[0]); // Convert selected file to Data URL
+    } else {
+        imagePreview.src = '#';
+        imagePreview.style.display = 'none'; // Hide the image preview if no file is selected
+    }
+});

@@ -3,11 +3,29 @@ const loginForm = document.getElementById('login-form');
 
 loginForm.addEventListener('submit', async (event) => {
     event.preventDefault();
-    
-    const formData = new FormData(loginForm);
-    const response = await fetch('/users/login', {
+
+    // Get form input values
+    const usernameInput = document.getElementById('username');
+    const passwordInput = document.getElementById('password');
+
+    // Perform input validation
+    if (!usernameInput.value || !passwordInput.value) {
+      console.error('Please fill in all the fields');
+      return;
+  }
+
+    // Create an object with the login credentials
+    const credentials = {
+      username: usernameInput.value,
+      password: passwordInput.value
+  };
+
+    const response = await fetch('http://localhost:3000/users/login', {
         method: 'POST',
-        body: formData
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(credentials)
     });
     
     if (response.ok) {
