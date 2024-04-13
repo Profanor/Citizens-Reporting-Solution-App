@@ -37,3 +37,40 @@ additionalLinksBtn.addEventListener("click", function() {
     // Toggle the visibility of the additional links container
     additionalLinksContainer.classList.toggle("show");
 });
+
+//carousel slider
+document.addEventListener('DOMContentLoaded', function () {
+    let currentIndex = 0;
+    const slides = document.querySelectorAll('.carousel-slide');
+    
+    // Show the initial slide
+    showSlide(currentIndex);
+
+    function showSlide(index) {
+        // Hide all slides
+        slides.forEach((slide) => {
+            slide.style.display = 'none';
+        });
+
+        // Show the selected slide
+        slides[index].style.display = 'block';
+    }
+
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % slides.length;
+        showSlide(currentIndex);
+    }
+    function startCarousel() {
+        setInterval(nextSlide, 5000);
+    }
+    startCarousel();
+    
+    function prevSlide() {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        showSlide(currentIndex);
+    }
+
+    // Event listeners for next and previous buttons
+    document.getElementById('nextBtn').addEventListener('click', nextSlide);
+    document.getElementById('prevBtn').addEventListener('click', prevSlide);
+});

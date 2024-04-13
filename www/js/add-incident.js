@@ -46,14 +46,11 @@ document.getElementById('incidentForm').addEventListener('submit', function(even
 function sendFormData(formData, submitButton) {
     fetch('http://localhost:3000/users/incident', {
         method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-          },
         body: formData
     })
     .then(response => {
         if (response.ok) {
-            return response.text(); // or response.json()
+            return response.json(); 
         } else {
             throw new Error('Failed to submit incident');
         }

@@ -22,13 +22,15 @@ signupForm.addEventListener('submit', async (event) => {
 
     // If input is valid, proceed with form submission
     const formData = new FormData(signupForm);
-    const jsonData = Object.fromEntries(formData);
+    const plainFormData = Object.fromEntries(formData.entries());
+    const requestBody = JSON.stringify(plainFormData);
+
     const response = await fetch('http://localhost:3000/users/signup', {
         method: 'POST',
         headers: {
-            'Content-Type': 'application/json'
-          },
-        body: JSON.stringify(jsonData)
+            'Content-Type': 'text/plain'
+        },
+        body: requestBody
     });
     
     if (response.ok) {
